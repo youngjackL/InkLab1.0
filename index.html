@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timm Ink Lab — Premium Tattoo Studio</title>
+  <meta name="description" content="Timm Ink Lab — Where Art Meets Skin. Premium custom tattoos, fine line, blackwork, colour realism and more. Book your consultation today." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/Logo.jpg" type="image/jpeg" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="loader">
+    <img src="images/Logo.jpg" alt="Timm Ink Lab" class="loader-logo" />
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/Logo.jpg" alt="Timm Ink Lab Logo" />
+      <div class="nav-logo-text">
+        Timm Ink Lab
+        <span>Premium Tattoo Studio</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <!-- <li><a href="#artists">Artists</a></li> -->
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-book btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+      Book Now
+    </button>
+
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <!-- <a href="#artists">Artists</a> -->
+    <a href="shop.html">Shop</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking" style="color:var(--gold);border:1px solid var(--gold-dim);padding:0.6rem 2rem;">Book Now</a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <img src="images/Logo.jpg" alt="Timm Ink Lab" class="hero-logo" />
+      <h1 class="display-title">TIMM INK LAB</h1>
+      <p class="hero-subtitle">Where Art Meets Skin</p>
+      <div class="divider-sm"></div>
+      <p class="hero-tagline">
+        Crafting timeless tattoos that tell your story.<br />
+        Precision, passion, and artistry in every line.
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-gold" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+          Book a Consultation
+        </button>
+        <a href="#gallery" class="btn">View Our Work</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about" class="section section-alt">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-image-wrap fade-up">
+          <img class="about-img" src="images/timpr2.jpeg" alt="Tattoo artist at work" />
+        </div>
+        <div class="about-text fade-up">
+          <span class="section-label">Our Story</span>
+          <h2>More Than Ink —<br />It's a Legacy</h2>
+          <div class="divider-sm" style="margin:1.2rem 0;"></div>
+          <p>Founded by Timm — a master tattoo artist with over a decade of experience — Timm Ink Lab was born from a relentless pursuit of perfection. Every piece we create is a collaboration between artist and canvas, a conversation between vision and skin.</p>
+          <p>We specialise in custom designs tailored to your story. Whether it's a whisper-fine single needle piece or a bold statement sleeve, our studio is your sanctuary.</p>
+          <p>Located in Thika's Runda estate, our sterile, welcoming environment ensures every client feels at home from the first consultation to the final reveal.</p>
+
+          <div class="about-stats">
+            <div class="stat-item fade-up">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Tattoos Done</span>
+            </div>
+            <div class="stat-item fade-up">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item fade-up">
+              <!-- <span class="stat-number"></span> -->
+              <!-- <span class="stat-label">Master Artist</span> -->
+            </div>
+          </div>
+
+          <button class="btn btn-gold" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+            Start Your Journey
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ SERVICES ══ -->
+  <section id="services" class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2 class="fade-up">Our Specialities</h2>
+        <div class="divider-sm"></div>
+        <p class="fade-up" style="color:var(--cream-dim);max-width:520px;margin:0 auto;">Every style, every vision — executed with the precision of a master and the care of a craftsman.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <!-- <span class="service-icon">🖤</span> -->
+           <img src="images/tribal.jpeg" alt="Blackwork & Tribal">
+          <h3>Blackwork & Tribal</h3>
+          <p>Bold, graphic designs with deep roots in tradition. From geometric precision to organic tribal motifs, our blackwork speaks with authority.</p>
+          <!-- <span class="service-price">From KES 3,500</span> -->
+        </div>
+        <div class="service-card fade-up">
+          <!-- <span class="service-icon">🌸</span> -->
+           <img src="images/4.jpeg" alt="">
+          <h3>Fine Line </h3>
+          <p>Delicate single-needle work that ages gracefully. Perfect for subtle, sophisticated statements — floral, geometric, or abstract.</p>
+          <!-- <span class="service-price">From KES 2,800</span> -->
+        </div>
+        <div class="service-card fade-up">
+          <!-- <span class="service-icon">🎨</span> -->
+           <img src="images/10.jpeg" alt="Sleeve Portraits">
+          <h3>Sleeve portraits</h3>
+          <p>Hyper-realistic portraits, vivid watercolours, and photographic detail. We bring photographs to life on your skin with stunning accuracy.</p>
+          <!-- <span class="service-price">From KES 6,000</span> -->
+        </div>
+        <div class="service-card fade-up">
+          <!-- <span class="service-icon">💀</span> -->
+           <img src="images/8.jpeg" alt="Minimalist">
+          <h3>Minimalist Tattoos</h3>
+          <p>Classic tattoo iconography reimagined with modern techniques, richer palettes, and bold linework with depth and dimension.</p>
+          <!-- <span class="service-price">From KES 4,500</span> -->
+        </div>
+        <!-- <div class="service-card fade-up">
+          <span class="service-icon">🌊</span>
+          <h3>Japanese & Irezumi</h3>
+          <p>Flowing compositions rooted in centuries of tradition. Dragons, koi, oni, and cherry blossom — rendered in authentic Irezumi style.</p>
+          <span class="service-price">From KES 5,000</span>
+        </div>
+        <div class="service-card fade-up">
+          <span class="service-icon">🔄</span>
+          <h3>Cover-Ups & Reworks</h3>
+          <p>Transform regrets into masterpieces. Our cover-up specialists will assess your existing work and design something you'll love forever.</p>
+          <span class="service-price">Consultation required</span> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ GALLERY ══ -->
+  <section id="gallery" class="section section-alt2">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Portfolio</span>
+        <h2 class="fade-up">Recent Work</h2>
+        <div class="divider-sm"></div>
+        <p class="fade-up" style="color:var(--cream-dim);max-width:480px;margin:0 auto;">
+          A selection from our studio. Every piece custom-designed, every session a collaboration.
+        </p>
+      </div>
+
+      <div class="gallery-grid fade-up">
+        <div class="gallery-item">
+          <img src="images/12.jpeg" alt="" />
+          <!-- <div class="gallery-overlay"><span>Japanese Dragon Sleeve</span></div> -->
+        </div>
+        <div class="gallery-item">
+          <img src="images/5.jpeg" alt="Fine Line Rose" />
+          <!-- <div class="gallery-overlay"><span>Fine Line Rose</span></div> -->
+        </div>
+        <div class="gallery-item">
+          <img src="images/6.jpeg" alt="Neo-Traditional Skull" />
+          <!-- <div class="gallery-overlay"><span>Neo-Traditional Skull</span></div> -->
+        </div>
+        <div class="gallery-item">
+          <img src="images/7.jpeg" alt="Realism Lion Portrait" />
+          <!-- <div class="gallery-overlay"><span>Realism Lion Portrait</span></div> -->
+        </div>
+        <div class="gallery-item">
+          <img src="images/9.jpeg" alt="Blackwork Geometric Full Back" />
+          <!-- <div class="gallery-overlay"><span>Blackwork Geometric Full Back</span></div> -->
+        </div>
+        <div class="gallery-item">
+          <video muted autoplay loop playsinline poster="images/timpr.jpeg">
+            <source src="images/WhatsApp%20Video%202026-05-28%20at%2012.43.04.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <!-- <div class="gallery-overlay"><span>Studio Session Video</span></div> -->
+        </div>
+      </div>
+
+      <!-- <div style="text-align:center;margin-top:3rem;" class="fade-up">
+        <a href="#" class="btn">View Full Gallery</a>
+      </div> -->
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ ARTISTS ══ -->
+  <!-- <section id="artists" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">The Team</span>
+        <h2 class="fade-up">Meet Our Artists</h2>
+        <div class="divider-sm"></div>
+      </div>
+
+      <div class="artists-grid">
+        <div class="artist-card fade-up">
+          <div class="artist-img-wrap">
+            <img src="images/timpr.jpeg" alt="Timm — Founder" />
+          </div>
+          <div class="artist-info">
+            <h3>Timm — Founder</h3>
+            <div class="artist-specialty">Blackwork · Neo-Traditional · Realism</div>
+            <p class="artist-bio">The visionary behind Timm Ink Lab. Over a decade of mastery in bold blackwork and neo-traditional styles. Timm's work is instantly recognisable for its depth and intentionality.</p>
+            <div class="artist-social">
+              <a href="#">Instagram</a>
+              <a href="#booking">Book</a>
+            </div>
+          </div>
+        </div>
+        <div class="artist-card fade-up">
+          <div class="artist-img-wrap">
+            <img src="images/timpr2.jpeg" alt="Aisha — Fine Line Artist" />
+          </div>
+          <div class="artist-info">
+            <h3>Aisha</h3>
+            <div class="artist-specialty">Fine Line · Botanical · Minimalist</div>
+            <p class="artist-bio">Aisha's single-needle botanical work has earned a devoted following. Her designs feel alive — like pressed flowers preserved forever under your skin.</p>
+            <div class="artist-social">
+              <a href="#">Instagram</a>
+              <a href="#booking">Book</a>
+            </div>
+          </div>
+        </div>
+        <div class="artist-card fade-up">
+          <div class="artist-img-wrap">
+            <img src="images/tribal3.jpeg" alt="Kenji — Japanese Tattoo Artist" />
+          </div>
+          <div class="artist-info">
+            <h3>Kenji</h3>
+            <div class="artist-specialty">Japanese · Irezumi · Watercolour</div>
+            <p class="artist-bio">Trained in traditional Irezumi technique, Kenji brings centuries of Japanese tattoo heritage to every piece. His large-scale compositions are storytelling in its purest form.</p>
+            <div class="artist-social">
+              <a href="#">Instagram</a>
+              <a href="#booking">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <div class="divider"></div>
+
+  <!-- ══ BOOKING ══ -->
+  <section id="booking" class="section">
+    <div class="section-inner">
+      <div class="booking-layout">
+        <div class="booking-info fade-up">
+          <span class="section-label">Get Started</span>
+          <h2>Book Your<br />Consultation</h2>
+          <div class="divider-sm" style="margin:1.2rem 0;"></div>
+          <p>Every great tattoo starts with a conversation. Fill out the form and we'll reach out within 24–48 hours to schedule your consultation.</p>
+          <ul class="booking-list">
+            <li>Consultations are free and obligation-free</li>
+            <li>Bring reference images or describe your concept</li>
+            <li>Deposit required to secure your booking slot</li>
+            <li>Touch-up sessions available within 3 months</li>
+            <li>We use only premium, hospital-grade sterile equipment</li>
+            <li>Aftercare products available in-studio and online</li>
+          </ul>
+          <div style="margin-top:2rem;">
+            <p style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Studio Hours</p>
+            <p style="color:var(--cream-dim);font-size:0.95rem;">Tue – Sat: 10:00 AM – 8:00 PM<br />Sun: 11:00 AM – 5:00 PM<br />Monday: Closed</p>
+          </div>
+        </div>
+
+        <form class="booking-form fade-up" id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="Your first name" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Your last name" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+254 700 000 000" />
+          </div>
+          <div class="form-group">
+            <label for="style">Tattoo Style</label>
+            <select id="style">
+              <option value="">Select a style...</option>
+              <option>Blackwork & Tribal</option>
+              <option>Fine Line & Minimalist</option>
+              <option>Colour Realism</option>
+              <option>Neo-Traditional</option>
+              <option>Japanese & Irezumi</option>
+              <option>Cover-Up / Rework</option>
+              <option>Not Sure — Need Advice</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="placement">Placement / Body Area</label>
+            <input type="text" id="placement" placeholder="e.g. Left forearm, right shoulder..." />
+          </div>
+          <div class="form-group">
+            <label for="budget">Estimated Budget (KES)</label>
+            <select id="budget">
+              <option value="">Select budget range...</option>
+              <option>Under KES 3,000</option>
+              <option>KES 3,000 – 6,000</option>
+              <option>KES 6,000 – 12,000</option>
+              <option>KES 12,000 – 25,000</option>
+              <option>KES 25,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Describe Your Vision</label>
+            <textarea id="message" placeholder="Tell us about your idea — concept, size, meaning, reference images you have in mind..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;text-align:center;" id="whatsappSubmit">
+            ✦ Request Consultation 
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ TESTIMONIALS ══ -->
+  <!-- <section class="section section-alt2">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Client Stories</span>
+        <h2 class="fade-up">What Our Clients Say</h2>
+        <div class="divider-sm"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-text">"Timm understood my vision immediately and elevated it beyond what I imagined. The detail in my sleeve is unreal. I get stopped on the street constantly. Worth every shilling."</p>
+          <div class="testimonial-author">Nairobi M.</div>
+          <div class="testimonial-work">Japanese Sleeve</div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-text">"Aisha's fine line work is something else. I had a rough idea on my phone and she turned it into a masterpiece on my ribs. Clean, precise, and healed perfectly."</p>
+          <div class="testimonial-author">Wanjiku K.</div>
+          <div class="testimonial-work">Fine Line Botanicals</div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-text">"Covered up a tattoo I'd had for 8 years that I hated. The team consulted me properly, were honest about what was possible, and the result is genuinely stunning."</p>
+          <div class="testimonial-author">David O.</div>
+          <div class="testimonial-work">Cover-Up Realism</div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <div class="divider"></div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/Logo.jpg" alt="Timm Ink Lab" />
+            <div class="nav-logo-text">Timm Ink Lab <span>Premium Tattoo Studio</span></div>
+          </a>
+          <p>Where art meets skin. Custom tattoos crafted with precision, passion, and artistry. Every piece tells a story — let us tell yours.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#artists">Artists</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Blackwork</a></li>
+            <li><a href="#services">Fine Line</a></li>
+            <li><a href="#services">Colour Realism</a></li>
+            <li><a href="#services">Neo-Traditional</a></li>
+            <li><a href="#services">Japanese</a></li>
+            <li><a href="#services">Cover-Ups</a></li>
+          </ul>
+        </div> -->
+
+        <div class="footer-col footer-contact">
+          <h4>Find Us</h4>
+          <p>📍 Timm Ink Lab Studio<br />Thika-Runda, Kenya</p>
+          <p>📞 +254 748384818</p>
+          <p>✉️ ink@timminklab.com</p>
+          <p style="margin-top:1rem;font-family:var(--font-heading);font-size:0.7rem;letter-spacing:0.2em;color:var(--gold-dim);">
+            Tue–Sat: 10AM – 8PM<br />
+            Sun: 11AM – 5PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Timm Ink Lab. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/timm_ink_lab?igsh=MXNvNmRrem9nOW02">Instagram</a>
+          <a href="https://www.facebook.com/share/1CqokkhiXe/?mibextid=wwXIfr">Facebook</a>
+          <a href="https://www.tiktok.com/@tattoos_by_timm?_r=1&_t=ZS-95TgI2vHaTt">TikTok</a>
+          <a href="https://wa.me/254748384818">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

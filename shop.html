@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Timm Ink Lab</title>
+  <meta name="description" content="Shop Timm Ink Lab — Premium aftercare products, merch, gift cards, art prints, and tattoo accessories." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/Logo.jpg" type="image/jpeg" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="loader">
+    <img src="images/Logo.jpg" alt="Timm Ink Lab" class="loader-logo" />
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo">
+      <img src="images/Logo.jpg" alt="Timm Ink Lab Logo" />
+      <div class="nav-logo-text">
+        Timm Ink Lab
+        <span>Premium Tattoo Studio</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#artists">Artists</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <button class="cart-btn" id="cartBtn" title="Your Cart" onclick="toggleCartPanel()">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="index.html#booking" class="nav-book btn">Book Now</a>
+    </div>
+
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="index.html#artists">Artists</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#booking" style="color:var(--gold);border:1px solid var(--gold-dim);padding:0.6rem 2rem;">Book Now</a>
+  </div>
+
+  <!-- ══ PAGE HERO ══ -->
+  <div class="page-hero">
+    <div>
+      <span class="section-label" style="text-align:center;display:block;margin-bottom:0.5rem;">The Lab Store</span>
+      <h1 class="display-title fade-up">Our Shop</h1>
+      <div class="divider-sm"></div>
+      <p class="fade-up" style="color:var(--cream-dim);max-width:480px;margin:1rem auto 0;text-align:center;">
+        Aftercare essentials, studio merch, original art prints, gift cards, and more.
+        Everything you need before, during, and after your session.
+      </p>
+    </div>
+  </div>
+
+  <!-- ══ FEATURED BANNER ══ -->
+  <section class="section section-alt" style="padding:4rem 2rem;">
+    <div class="section-inner">
+      <div class="featured-banner fade-up">
+        <div class="featured-content">
+          <span class="section-label">Staff Pick</span>
+          <h2>Premium Aftercare Kit<br />— Your Tattoo's Best Friend</h2>
+          <p style="color:var(--cream-dim);">
+            Our best-selling aftercare bundle contains everything needed for a flawless heal:
+            foam cleanser, organic balm, daily moisturiser, and our full aftercare guide.
+            Formulated specifically for fresh tattoos.
+          </p>
+          <button class="btn btn-gold" onclick="window.timmAddToCart && window.timmAddToCart('p3','Premium Aftercare Kit',1800)">
+            Add to Cart — KES 1,800
+          </button>
+        </div>
+        <div class="featured-visual">
+          <img src="images/30mlblack.jpeg" alt="Premium aftercare kit" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SHOP ══ -->
+  <section class="section">
+    <div class="section-inner">
+
+      <!-- Toolbar -->
+      <div class="shop-toolbar">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Products</button>
+          <button class="filter-tab" data-filter="aftercare">Aftercare</button>
+          <button class="filter-tab" data-filter="merch">Merch</button>
+          <button class="filter-tab" data-filter="supplies">Supplies</button>
+          <!-- <button class="filter-tab" data-filter="services">Services</button> -->
+          <!-- <button class="filter-tab" data-filter="giftcards">Gift Cards</button> -->
+        </div>
+        <select id="sortSelect" class="shop-sort">
+          <option value="default">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+
+      <!-- Products Grid (rendered by JS) -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Populated by shop.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ WHY SHOP WITH US ══ -->
+  <section class="section section-alt2">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Why Us</span>
+        <h2 class="fade-up">The Timm Promise</h2>
+        <div class="divider-sm"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <span class="service-icon">🚚</span>
+          <h3>Fast Nairobi Delivery</h3>
+          <p>Same-day delivery within Nairobi for orders placed before 2PM. Countrywide shipping available via G4S and courier partners.</p>
+        </div>
+        <div class="service-card fade-up">
+          <span class="service-icon">✅</span>
+          <h3>Studio-Curated Products</h3>
+          <p>Every product we sell is used in our studio first. If we wouldn't put it on our clients' fresh tattoos, we won't sell it to you.</p>
+        </div>
+        <div class="service-card fade-up">
+          <span class="service-icon">🔒</span>
+          <h3>Secure Checkout</h3>
+          <p>M-Pesa, Visa/Mastercard, and bank transfer accepted. All transactions encrypted and processed securely.</p>
+        </div>
+        <div class="service-card fade-up">
+          <span class="service-icon">💬</span>
+          <h3>Expert Aftercare Advice</h3>
+          <p>Every order includes a personal aftercare note from your artist. WhatsApp support available for healing questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ CART SLIDE PANEL ══ -->
+  <div id="cartOverlay" style="
+    position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:4998;
+    opacity:0;pointer-events:none;transition:opacity 0.3s ease;backdrop-filter:blur(4px);
+  " onclick="toggleCartPanel()"></div>
+
+  <div id="cartPanel" style="
+    position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);
+    background:var(--black-card);border-left:1px solid var(--black-border);
+    z-index:4999;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    display:flex;flex-direction:column;padding:2rem;overflow-y:auto;
+  ">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--black-border);">
+      <h3 style="font-family:var(--font-heading);font-size:0.85rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);">Your Cart</h3>
+      <button onclick="toggleCartPanel()" style="background:none;border:none;color:var(--gold-dim);font-size:1.4rem;cursor:pointer;padding:0.2rem 0.5rem;">✕</button>
+    </div>
+    <div id="cartItems" style="flex:1;min-height:100px;">
+      <p style="color:var(--cream-dim);font-style:italic;font-size:0.95rem;">Your cart is empty.</p>
+    </div>
+    <div id="cartFooter" style="display:none;border-top:1px solid var(--black-border);padding-top:1.5rem;margin-top:1.5rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+        <span style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream-dim);">Total</span>
+        <span id="cartTotal" style="font-family:var(--font-display);font-size:1.3rem;color:var(--gold-light);">KES 0</span>
+      </div>
+      <button class="btn btn-gold" style="width:100%;text-align:center;" onclick="checkout()">Proceed to Checkout</button>
+      <button class="btn" style="width:100%;text-align:center;margin-top:0.8rem;" onclick="clearCart()">Clear Cart</button>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/Logo.jpg" alt="Timm Ink Lab" />
+            <div class="nav-logo-text">Timm Ink Lab <span>Premium Tattoo Studio</span></div>
+          </a>
+          <p>Where art meets skin. Custom tattoos crafted with precision, passion, and artistry. Every piece tells a story.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#">Aftercare</a></li>
+            <li><a href="#">Merch</a></li>
+            <li><a href="#">Supplies</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <!-- <li><a href="#">Gift Cards</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>📍 Nairobi, Kenya</p>
+          <p>📞 +254 700 000 000</p>
+          <p>✉️ shop@timminklab.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Timm Ink Lab. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/timm_ink_lab?igsh=MXNvNmRrem9nOW02">Instagram</a>
+          <a href="https://www.facebook.com/share/1CqokkhiXe/?mibextid=wwXIfr">Facebook</a>
+          <a href="https://www.tiktok.com/@tattoos_by_timm?_r=1&_t=ZS-95TgI2vHaTt">TikTok</a>
+          <a href="https://wa.me/254748384818">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="cart-toast"></div>
+
+  <script src="main.js"></script>
+  <script src="shop.js"></script>
+  <script>
+    // Cart panel logic
+    let cartOpen = false;
+
+    function toggleCartPanel() {
+      cartOpen = !cartOpen;
+      const panel = document.getElementById('cartPanel');
+      const overlay = document.getElementById('cartOverlay');
+      panel.style.transform = cartOpen ? 'translateX(0)' : 'translateX(100%)';
+      overlay.style.opacity = cartOpen ? '1' : '0';
+      overlay.style.pointerEvents = cartOpen ? 'all' : 'none';
+      document.body.style.overflow = cartOpen ? 'hidden' : '';
+      if (cartOpen) renderCartPanel();
+    }
+
+    function renderCartPanel() {
+      const cart = JSON.parse(localStorage.getItem('timmCart') || '[]');
+      const itemsEl = document.getElementById('cartItems');
+      const footerEl = document.getElementById('cartFooter');
+      const totalEl = document.getElementById('cartTotal');
+
+      if (cart.length === 0) {
+        itemsEl.innerHTML = '<p style="color:var(--cream-dim);font-style:italic;font-size:0.95rem;">Your cart is empty.</p>';
+        footerEl.style.display = 'none';
+        return;
+      }
+
+      footerEl.style.display = 'block';
+      let total = 0;
+      itemsEl.innerHTML = cart.map(item => {
+        total += item.price * item.qty;
+        return `
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-bottom:1px solid var(--black-border);gap:1rem;">
+            <div style="flex:1;">
+              <div style="font-family:var(--font-heading);font-size:0.82rem;color:var(--cream);letter-spacing:0.05em;margin-bottom:0.2rem;">${item.name}</div>
+              <div style="font-size:0.78rem;color:var(--gold-dim);">KES ${item.price.toLocaleString()} × ${item.qty}</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;">
+              <button onclick="changeQty('${item.id}',-1)" style="background:var(--black-card);border:1px solid var(--black-border);color:var(--gold);width:26px;height:26px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;">−</button>
+              <span style="font-family:var(--font-heading);font-size:0.82rem;color:var(--cream);min-width:20px;text-align:center;">${item.qty}</span>
+              <button onclick="changeQty('${item.id}',1)" style="background:var(--black-card);border:1px solid var(--black-border);color:var(--gold);width:26px;height:26px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;">+</button>
+              <button onclick="removeFromCart('${item.id}')" style="background:none;border:none;color:var(--red-accent);cursor:pointer;font-size:1rem;margin-left:0.3rem;">✕</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      totalEl.textContent = 'KES ' + total.toLocaleString();
+      // Update header count
+      const count = cart.reduce((s,i) => s+i.qty, 0);
+      document.querySelectorAll('.cart-count').forEach(el => {
+        el.textContent = count;
+        el.classList.toggle('visible', count > 0);
+      });
+    }
+
+    function changeQty(id, delta) {
+      let cart = JSON.parse(localStorage.getItem('timmCart') || '[]');
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+      }
+      localStorage.setItem('timmCart', JSON.stringify(cart));
+      renderCartPanel();
+    }
+
+    function removeFromCart(id) {
+      let cart = JSON.parse(localStorage.getItem('timmCart') || '[]').filter(i => i.id !== id);
+      localStorage.setItem('timmCart', JSON.stringify(cart));
+      renderCartPanel();
+    }
+
+    function clearCart() {
+      localStorage.removeItem('timmCart');
+      renderCartPanel();
+    }
+
+    function checkout() {
+      const cart = JSON.parse(localStorage.getItem('timmCart') || '[]');
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+      showCheckoutModal();
+    }
+
+    function showCheckoutModal() {
+      // Create modal overlay
+      const overlay = document.createElement('div');
+      overlay.id = 'checkoutModalOverlay';
+      overlay.style.cssText = `
+        position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:5000;
+        display:flex;align-items:center;justify-content:center;
+        backdrop-filter:blur(4px);padding:1rem;
+      `;
+
+      // Create modal content
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+        background:var(--black-card);border:1px solid var(--black-border);
+        max-width:500px;width:100%;max-height:90vh;overflow-y:auto;
+        padding:2rem;border-radius:4px;
+      `;
+
+      const cart = JSON.parse(localStorage.getItem('timmCart') || '[]');
+      const total = cart.reduce((s,i) => s + i.price * i.qty, 0);
+
+      modal.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+          <h3 style="font-family:var(--font-heading);font-size:0.85rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);">Checkout Details</h3>
+          <button onclick="closeCheckoutModal()" style="background:none;border:none;color:var(--gold-dim);font-size:1.4rem;cursor:pointer;">✕</button>
+        </div>
+
+        <form id="checkoutForm" onsubmit="sendToWhatsApp(event)">
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label style="display:block;font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:0.4rem;">Full Name *</label>
+            <input type="text" id="checkoutName" required placeholder="Enter your full name" style="width:100%;padding:0.7rem;background:var(--black-card);border:1px solid var(--black-border);color:var(--cream);font-size:0.95rem;" />
+          </div>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label style="display:block;font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:0.4rem;">Phone Number *</label>
+            <input type="tel" id="checkoutPhone" required placeholder="+254 700 000 000" style="width:100%;padding:0.7rem;background:var(--black-card);border:1px solid var(--black-border);color:var(--cream);font-size:0.95rem;" />
+          </div>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label style="display:block;font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:0.4rem;">Delivery Location *</label>
+            <input type="text" id="checkoutLocation" required placeholder="e.g., Westlands, Nairobi" style="width:100%;padding:0.7rem;background:var(--black-card);border:1px solid var(--black-border);color:var(--cream);font-size:0.95rem;" />
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label style="display:block;font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:0.4rem;">Preferred Delivery Method *</label>
+            <select id="checkoutDelivery" required style="width:100%;padding:0.7rem;background:var(--black-card);border:1px solid var(--black-border);color:var(--cream);font-size:0.95rem;">
+              <option value="">Select delivery method...</option>
+              <option value="Same-day delivery (Nairobi only)">Same-day delivery (Nairobi only)</option>
+              <option value="Countrywide courier (G4S)">Countrywide courier (G4S)</option>
+              <option value="Pick up in studio">Pick up in studio</option>
+            </select>
+            <p style="font-size:0.72rem;color:var(--gold-dim);margin-top:0.4rem;font-style:italic;">* Delivery fees vary based on your location and will be confirmed upon checkout.</p>
+          </div>
+
+          <div style="border-top:1px solid var(--black-border);padding-top:1rem;margin-bottom:1.5rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream-dim);">Order Total</span>
+              <span style="font-family:var(--font-display);font-size:1.3rem;color:var(--gold-light);">KES ${total.toLocaleString()}</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width:100%;text-align:center;">
+            📱 Send Order via WhatsApp
+          </button>
+        </form>
+      `;
+
+      overlay.appendChild(modal);
+      document.body.appendChild(overlay);
+    }
+
+    function closeCheckoutModal() {
+      const overlay = document.getElementById('checkoutModalOverlay');
+      if (overlay) {
+        overlay.remove();
+      }
+    }
+
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('checkoutName').value.trim();
+      const phone = document.getElementById('checkoutPhone').value.trim();
+      const location = document.getElementById('checkoutLocation').value.trim();
+      const delivery = document.getElementById('checkoutDelivery').value;
+      const cart = JSON.parse(localStorage.getItem('timmCart') || '[]');
+      const total = cart.reduce((s,i) => s + i.price * i.qty, 0);
+
+      // Build the message
+      let message = `🛒 *New Shop Order*%0A%0A`;
+      message += `👤 Name: ${name}%0A`;
+      message += `📱 Phone: ${phone}%0A`;
+      message += `📍 Location: ${location}%0A`;
+      message += `🚚 Delivery: ${delivery}%0A%0A`;
+      message += `*Order Items:*%0A`;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.qty;
+        message += `${index + 1}. ${item.name} × ${item.qty} — KES ${itemTotal.toLocaleString()}%0A`;
+      });
+
+      message += `%0A💰 *Total: KES ${total.toLocaleString()}*`;
+
+      // WhatsApp number
+      const whatsappNumber = '254748384818';
+
+      // Open WhatsApp
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+
+      // Close modal and clear cart
+      closeCheckoutModal();
+      clearCart();
+      toggleCartPanel();
+    }
+  </script>
+</body>
+</html>
